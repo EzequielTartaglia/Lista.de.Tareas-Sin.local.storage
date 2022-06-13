@@ -1,0 +1,177 @@
+:root {
+    --main-color: #0d366b;
+    --secondary-color: #49b2cc;
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --desable: #bb2689;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background:radial-gradient(rgb(201, 201, 201), rgb(65, 65, 65))
+}
+
+*::first-letter{
+    text-transform: capitalize;
+}
+
+.roundBorder{
+    border-radius: 7px;
+}
+
+.list{
+    margin:25px auto;
+    margin-top: 3rem;
+    padding: 25px;
+    background: linear-gradient(#0d366b , #238ab3, #0d366b);
+    width:80%;
+    max-width: 50rem;
+    color: white;
+    border: var(--secondary-color) solid;
+    -webkit-box-shadow: 6px 9px 21px 5px #bb2689; 
+box-shadow: 6px 9px 21px 5px #991d70a2;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dateLeft{
+    display: flex;
+    align-items: center;
+}
+
+#dateNumber{
+    font-size: 50px;
+}
+
+#dateText{
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+#dateMonth,
+#dateNumber,
+#dateText {
+    font-weight: bold;
+}
+
+#dateMonth,
+#dateYear {
+    margin-left: 7px;
+    font-size: 20px;
+}
+
+form{
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 15px;
+    
+    
+}
+
+input{
+    border: none;
+    padding-left: 10px;
+    background-color: var(--white);
+    border: var(--secondary-color) solid 1.5px;
+    transition: 0.5s;
+    color: var(--secondary-color);
+    font-weight: 200;
+
+}
+
+input:focus {
+    outline: none;
+    border: var(--desable) solid 1.5px;
+    box-shadow: 0px 10px 13px -7px #0d366b, 5px 5px 11px 5px rgba(0,0,0,0);
+    color: #bb2689;
+
+    
+}
+
+input:hover{
+border: var(--desable) solid 1.5px;
+box-shadow: 0px 10px 13px -7px #0d366b, 5px 5px 11px 5px rgba(0,0,0,0);
+transition: 0.6s;
+color: #bb2689;
+
+}
+
+.addTaskButton,
+.orderButton {
+    border: none;
+    font-weight: bold;
+    cursor: pointer;    
+}
+
+.addTaskButton{
+    height: 35px;
+    border-radius: 30px;
+    font-size: 18px;
+    background-color: var(--desable);
+    color: var(--white);
+    transition: 0.6s;
+}
+
+.addTaskButton:hover{
+    background-color: var(--white);
+    color: var(--desable);
+    transition: 0.6s;
+    box-shadow: 0px 10px 13px -7px #0d366b, 5px 5px 11px 5px rgba(0,0,0,0);
+}
+
+.orderButton{
+    background-color: var(--secondary-color);
+    color: var(--white);
+    transition: 0.6s;
+}
+
+.orderButton:hover{
+    background-color: var(--white);
+    color: var(--desable);
+
+    transition: 0.6s;
+    box-shadow: 0px 10px 13px -7px var(--desable), 5px 5px 11px 5px rgba(0,0,0,0);
+
+}
+
+.task {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.6s;
+
+}
+
+.task:hover{
+
+    box-shadow: 0px 10px 13px -7px var(--desable), 5px 5px 11px 5px rgba(0,0,0,0);
+    background-color: var(--white);
+    color: var(--desable);
+    transition: 0.6s;
+
+}
+.done{
+    background-color: rgb(182, 177, 177);
+    text-decoration: line-through var(--main-color);
+    color: var(--main-color);
+    transition: 0.6s;
+}
+
+.done:hover{
+    transition: 0.6s;
+    box-shadow: 0px 10px 13px -7px var(--desable), 5px 5px 11px 5px rgba(0,0,0,0);
+    background-color: rgb(182, 177, 177);
+    text-decoration: line-through var(--desable);
+
+ 
+}

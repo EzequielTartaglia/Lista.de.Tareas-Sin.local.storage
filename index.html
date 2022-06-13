@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de tareas</title>
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+        <!-- Css -->
+        <link rel="stylesheet" href="./Css/styles.css">
+        </head>
+    <body>
+       <div class="list roundBorder">
+            <!-- Datos de la fecha(cargados con el Js ) -->
+            <div class="date">
+                <div class="dateLeft">
+                    <div id="dateNumber"></div>
+                    <div>
+                        <div id="dateMonth"></div>
+                        <div id="dateYear"></div>
+                    </div>
+                </div>
+                <div id="dateText"></div>
+            </div>
+            <!-- Formulario -->
+                    <!-- El "onsubmit" ↓ hara que se ejecute lo que ponga el button "submit" -->
+            <form onsubmit="addNewTask(event)"> 
+                    <!-- Texto que va a ir en la nueva tarea ingresada-->
+                <input type="text" name="taskText" autocomplete="off" placeholder="Nueva tarea" class="roundBorder">
+                    <!-- Boton + para agregar la nueva tarea escrita(submit → ejecuta "addNewTask(event)") -->
+                <button type="submit" class="addTaskButton">+</button>
+                    <!-- Boton ORDENAR (las hechas y las por hacer) -->
+                <button type="button" class="orderButton roundBorder" onclick="renderOrderedTasks()">Ordenar</button>
+                <button type="button" class="orderButton roundBorder" onclick="cleanAllTasks()">Vaciar Lista</button>
+
+            </form>
+                <!-- Contenedor de todas las tareas agregadas -->
+                <div id="tasksContainer"></div>
+        </div>  
+    <!-- Sweet Alert Framework -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    </body>
+    <!-- Script -->
+    <script src="./Js/scripts.js" defer></script>
+    
+</html>
